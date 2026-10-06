@@ -1,62 +1,47 @@
-# SoccerNet Challenge 2027 — Streaming Visual Question Answering
+# SoccerNet Challenge 2027 — Streaming Visual Question Answering (VQA)
 
-📢 **Streaming Visual Question Answering Challenge!** 🚀
+📢 **Streaming Visual Question Answering (VQA) Challenge!** 🚀
 
-Can AI answer questions about a match as it unfolds? This challenge brings together football video understanding and language, asking models to answer questions using information available in an incoming video stream. The focus is on understanding what has been observed so far, without relying on future footage.
-
-⏳ **Status:** In preparation — submissions are not open.  
-📅 **Submission deadline:** April 25, 2027; cutoff time and timezone to be announced.  
-👥 **Task lead(s):** KAUST, Jiayuan Rao and Ahmad Sait  
+⏳ **Status:** In preparation — submissions are not open.\
+📅 **Submission deadline:** April 25, 2027, 23:59 Anywhere on Earth (AoE; UTC−12).\
+👥 **Task leads:** Jiayuan Rao and Ahmad Sait\
 🤝 **Sponsor:** To be announced
 
-🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) / 🗂️ [Data](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) / 💻 [Baseline predictions](baselines/README.md) / 📚 [Rules](docs/rules.md) / 📊 [Evaluation](evaluation/README.md)
+🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation](evaluation/README.md) · 🏆 [Evaluation server](https://www.codabench.org/) (task URL TBD)
 
 ## Task
 
-[Task specification and open decisions](docs/task.md) describes the current scope. This repository will hold the versioned evaluation code and submission instructions for the 2027 challenge. Baselines may live here or in an external repository linked below.
+Answer multiple-choice questions while a soccer match unfolds. At question time `t`, a system may use only video observed up to `t`, the question and options, and permitted pre-match metadata. The task tests immediate visual understanding and memory over long streams without access to future frames.
 
 ## Data
 
-Access the dataset on [Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027). Follow its access conditions and download instructions.
-
-This repository includes [public test questions and labels](data/test/test_GT.json), [public challenge questions without labels](data/challenge/challenge_public.json), and baseline predictions for both splits. See [the data guide](docs/data.md) for the complete inventory. **Challenge ground truth remains private.**
+The [SN-VQA-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) uses OpenSportsLib OSL JSON. This repository includes [public test questions and labels](data/test/test_GT.json) for 4 halves/700 questions, [public challenge questions without labels](data/challenge/challenge_public.json) for 10 halves/1,158 questions, and the baseline predictions for both. The **challenge ground truth is private** and not committed. Train and validation sets have not yet been identified; see the [split inventory](data/README.md).
 
 ## Baseline
 
-The task lead's [GPT-5.5 test predictions](data/test/test_submission.json) and [challenge predictions](data/challenge/challenge_submission.json) are included. The [source repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge) also has a text-only API baseline and links to a streaming video baseline. These are reference starting points, not final published 2027 rankings.
-
-See [baseline instructions](baselines/README.md). Existing research baselines must be checked against the final challenge format before their scores are advertised as 2027 reference results.
+The [baseline folder](baselines/README.md) points to the included GPT-5.5 prediction files, the task lead's [text-only API baseline](https://github.com/jyrao/soccernet-streaming-vqa-challenge), and [MatchLive](https://github.com/Becomebright/MatchLive). It explains how to download the dataset and run or evaluate each available baseline. The 2027 reference paper is forthcoming.
 
 ## Evaluation
 
-The scorer now follows the task lead's OSL JSON format and D1–D4 dimension-average metric. It is locally tested on the public test set; the CodaBench challenge server and final rules remain to be launched.
+The [evaluation folder](evaluation/README.md) contains the task lead's OSL multiple-choice evaluator and a CodaBench adapter. The default score is the unweighted mean of D1–D4 accuracies. This task-specific evaluator remains authoritative: OpenSportsLib's generic VQA metrics score free-text answers and do not implement this streaming option-ID/dimension protocol. The server URL is TBD.
 
-See [evaluation instructions](evaluation/README.md) for the OSL JSON format, local command, scoring rule, and CodaBench package contract. CodaBench test and challenge links will be added after the servers have been validated.
+## Citation
+
+The 2027 Streaming VQA reference paper is forthcoming. Its verified conference BibTeX will be added here after publication.
+
+## Updates and support
+
+Each task launches independently when ready. Follow the [challenge website](https://www.soccer-net.org/challenges/2027) and [SoccerNet Discord](https://discord.gg/cPbqf2mAwF) for announcements. Use repository issues for reproducible code problems; do not post access tokens or restricted data.
 
 ## Release readiness
 
 | Item | Current state |
 | --- | --- |
-| Task definition | Streaming OSL multiple-choice task and draft rules documented |
-| Data and splits | Public test GT and challenge questions present; challenge GT private; train/valid TBD |
-| Baseline | Test and challenge baseline predictions present |
-| Evaluation | Source evaluator adapted and tested on public test |
-| Benchmark | CodaBench server pending |
-| Sponsor | Not confirmed |
+| Task definition | Streaming multiple-choice protocol and draft rules documented |
+| Data | Public test GT and challenge questions present; challenge GT private; train/valid TBD |
+| Baseline | Test and challenge predictions present |
+| Evaluation | Task-lead evaluator and adapter tested against public test and private challenge reference |
+| Benchmark | CodaBench server TBD |
+| Sponsor | TBD |
 
-Each task launches independently after its rules, data, baseline, evaluator and benchmark are verified. See the [task specification](docs/task.md) for remaining technical decisions.
-
-## Getting started
-
-1. Read the [task specification](docs/task.md) and [draft rules](docs/rules.md).
-2. Follow the [data access guide](docs/data.md).
-3. Consult the [baseline instructions](baselines/README.md).
-4. Check the [evaluation status](evaluation/README.md) before generating submissions.
-
-## Updates and support
-
-Each task launches independently once ready. Follow the [challenge website](https://www.soccer-net.org/challenges/2027) and [SoccerNet Discord](https://discord.gg/cPbqf2mAwF). Use repository issues for reproducible code problems; do not post access tokens, restricted data or private labels.
-
-## Citation and licensing
-
-The Streaming VQA paper is forthcoming. [CITATION.bib](CITATION.bib) will be updated with its verified conference citation after publication. The 2027 challenge citation and repository code license will be confirmed before release.
+This section is for preparation and will be removed when this task is ready for release.

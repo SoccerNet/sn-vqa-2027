@@ -1,6 +1,6 @@
-# Streaming VQA rules — draft
+# Streaming VQA Challenge Rules — draft
 
-📅 **Deadline:** April 25, 2027; cutoff time and timezone to be announced. Final rules take effect only when the task launches.
+📅 **Submission deadline:** April 25, 2027, 23:59 Anywhere on Earth (AoE; UTC−12).
 
 - **Visual-only:** use muted video; no broadcast audio, speech recognition, commentary transcript, or alternate audio source.
 - **Streaming-only:** a question at time `t` may use frames and memory available by `t`, never future footage or post-match information.
@@ -9,4 +9,4 @@
 - **Technical report:** each submission must document models/APIs, data sources, prompts/settings, and how audio, future frames, and web retrieval were excluded. Final report form and verification procedure are pending.
 - **Submission:** provide one OSL JSON prediction for every question. Missing or extra IDs fail validation. An unanswered or invalid option counts as incorrect.
 
-The [evaluation guide](../evaluation/README.md) describes the current metric. Team eligibility, limits, tie policy, external training data, verification, and appeals still need organizer approval. The public test set is for development; the hidden challenge set determines the final ranking.
+The [evaluation guide](evaluation/README.md) describes the current D1–D4 dimension-average metric. Team eligibility, limits, tie policy, external training data, verification, and appeals still need organizer approval. The public test set is for development; the hidden challenge set determines the final ranking. These rules become official only when the task launches.
