@@ -1,12 +1,12 @@
-# Split layout
+# Data
 
-The task lead's [Streaming VQA reference repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge) supplies the public test questions and labels, public challenge questions without labels, and baseline prediction files mirrored here.
+[SoccerNet/SN-VQA-2027](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) uses OpenSportsLib OSL JSON. The files mirrored in this repository are:
 
-| Split | Status | Ground truth here? |
-| --- | --- | --- |
-| train | Not yet identified | No |
-| valid | Not yet identified | No |
-| test | [test_GT.json](test_GT.json): 4 halves and 700 questions; [test_submission.json](test_submission.json): baseline predictions | Yes, test only |
-| challenge | [challenge_public.json](challenge_public.json): 10 halves and 1,158 questions; [challenge_submission.json](challenge_submission.json): baseline predictions | **No** |
+| File | Contents |
+| --- | --- |
+| [test_GT.json](test_GT.json) | Questions and answers from 4 match halves (700 questions) |
+| [test_submission.json](test_submission.json) | Baseline predictions for the test set |
+| [challenge_public.json](challenge_public.json) | Questions without answers from 10 match halves (1,158 questions) |
+| [challenge_submission.json](challenge_submission.json) | Baseline predictions for the challenge questions |
 
-The challenge GT exists in the organizer's private source directory. It must stay outside this repository and the participant package. Frozen source commit: `6e71e319e1f0c74bd5d5a096d986b4c3dbb9388c` for the copied public files. See [data guide](../README.md#data).
+The challenge answers are withheld for evaluation. The mirrored files come from the [task lead's reference repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge) at commit `6e71e319e1f0c74bd5d5a096d986b4c3dbb9388c`.
