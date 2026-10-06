@@ -2,6 +2,8 @@
 
 [SoccerNet/SN-VQA-2027](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) uses OpenSportsLib OSL JSON. The files mirrored in this repository are:
 
+The task provides **test and challenge sets only**; there is no separate training or validation set.
+
 | File | Contents |
 | --- | --- |
 | [test_GT.json](test_GT.json) | Questions and answers from 4 match halves (700 questions) |

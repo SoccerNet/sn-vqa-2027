@@ -9,11 +9,11 @@
 
 ## Task
 
-Answer multiple-choice questions as a soccer match unfolds. At question time `t`, use only the video observed up to `t`, the question and options, and permitted pre-match metadata. The task measures immediate visual understanding and memory over long streams without future frames.
+Answer multiple-choice questions as a soccer match unfolds. At question time `t`, a method may use video observed up to `t`, the question and options, and permitted pre-match metadata. Text-only methods that use the question and options without video are eligible on the same leaderboard. Future frames are prohibited.
 
 ## Data
 
-The [SN-VQA-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) uses OpenSportsLib OSL JSON. This repository includes [test questions and labels](data/test_GT.json) for 4 halves and 700 questions, [challenge questions without labels](data/challenge_public.json) for 10 halves and 1,158 questions, and [baseline predictions](data/README.md) for both. Challenge answers are withheld for evaluation.
+The [SN-VQA-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) uses OpenSportsLib OSL JSON. This task provides test and challenge sets, with no separate training or validation set. This repository includes [test questions and labels](data/test_GT.json) for 4 halves and 700 questions, [challenge questions without labels](data/challenge_public.json) for 10 halves and 1,158 questions, and [baseline predictions](data/README.md) for both. Challenge answers are withheld for evaluation.
 
 ## Baseline
 
