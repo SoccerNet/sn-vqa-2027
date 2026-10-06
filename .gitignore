@@ -5,9 +5,13 @@ __pycache__/
 .env.*
 .DS_Store
 private/
-data/
 outputs/
 *.zip
 *.pt
 *.pth
 *.ckpt
+
+# Keep hidden challenge references out of Git.
+**/challenge_GT.json
+**/challenge_ground_truth*
+**/challenge_labels*

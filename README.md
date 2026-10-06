@@ -9,7 +9,7 @@ Can AI answer questions about a match as it unfolds? This challenge brings toget
 👥 **Task lead(s):** KAUST, Jiayuan Rao and Ahmad Sait  
 🤝 **Sponsor:** To be announced
 
-🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) / 🗂️ [Data](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) / 💻 **Baseline:** Coming soon / 📚 [Rules](docs/rules.md) / 📊 [Evaluation](evaluation/README.md)
+🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) / 🗂️ [Data](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) / 💻 [Baseline predictions](baselines/README.md) / 📚 [Rules](docs/rules.md) / 📊 [Evaluation](evaluation/README.md)
 
 ## Task
 
@@ -19,19 +19,32 @@ Can AI answer questions about a match as it unfolds? This challenge brings toget
 
 Access the dataset on [Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027). Follow its access conditions and download instructions.
 
-See [the data guide](docs/data.md) for release status and split details. Dataset availability does not mean that the challenge is open. Private evaluation labels are not included in this repository.
+This repository includes [public test questions and labels](data/test/test_GT.json), [public challenge questions without labels](data/challenge/challenge_public.json), and baseline predictions for both splits. See [the data guide](docs/data.md) for the complete inventory. **Challenge ground truth remains private.**
 
 ## Baseline
 
-The 2027 streaming baseline has not been announced. The previous SoccerAgent repository (https://github.com/jyrao/SoccerAgent) is background only and is not presented as a compatible streaming baseline.
+The task lead's [GPT-5.5 test predictions](data/test/test_submission.json) and [challenge predictions](data/challenge/challenge_submission.json) are included. The [source repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge) also has a text-only API baseline and links to a streaming video baseline. These are reference starting points, not final published 2027 rankings.
 
 See [baseline instructions](baselines/README.md). Existing research baselines must be checked against the final challenge format before their scores are advertised as 2027 reference results.
 
 ## Evaluation
 
-A locally tested prototype scorer is included; the official 2027 evaluation protocol is not frozen.
+The scorer now follows the task lead's OSL JSON format and D1–D4 dimension-average metric. It is locally tested on the public test set; the CodaBench challenge server and final rules remain to be launched.
 
-See [evaluation instructions](evaluation/README.md) for current code, submission formats and remaining decisions. CodaBench test and challenge links will be added after the servers have been validated.
+See [evaluation instructions](evaluation/README.md) for the OSL JSON format, local command, scoring rule, and CodaBench package contract. CodaBench test and challenge links will be added after the servers have been validated.
+
+## Release readiness
+
+| Item | Current state |
+| --- | --- |
+| Task definition | Streaming OSL multiple-choice task and draft rules documented |
+| Data and splits | Public test GT and challenge questions present; challenge GT private; train/valid TBD |
+| Baseline | Test and challenge baseline predictions present |
+| Evaluation | Source evaluator adapted and tested on public test |
+| Benchmark | CodaBench server pending |
+| Sponsor | Not confirmed |
+
+Each task launches independently after its rules, data, baseline, evaluator and benchmark are verified. See the [task specification](docs/task.md) for remaining technical decisions.
 
 ## Getting started
 
@@ -46,4 +59,4 @@ Each task launches independently once ready. Follow the [challenge website](http
 
 ## Citation and licensing
 
-The 2027 citation and repository code license will be confirmed before release. Dataset access terms and external baseline licenses apply independently; linking them does not relicense their contents.
+The Streaming VQA paper is forthcoming. [CITATION.bib](CITATION.bib) will be updated with its verified conference citation after publication. The 2027 challenge citation and repository code license will be confirmed before release.

@@ -1,5 +1,5 @@
-# Baseline
+# Baselines
 
-The 2027 streaming baseline has not been announced. The previous SoccerAgent repository (https://github.com/jyrao/SoccerAgent) is background only and is not presented as a compatible streaming baseline.
+The [test predictions](../data/test/test_submission.json) and [challenge predictions](../data/challenge/challenge_submission.json) were supplied by the [task lead's reference repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge), which describes them as GPT-5.5 baseline submissions. The challenge scores are not published here because their reference labels are private. Test them locally with the [evaluator](../evaluation/README.md).
 
-Before the challenge release, record a tested commit or tag, environment, weights, inference command, output conversion, expected scores and compute requirements. External code remains in its upstream repository and under its own license.
+The source also includes a [text-only API baseline script](https://github.com/jyrao/soccernet-streaming-vqa-challenge/blob/6e71e319e1f0c74bd5d5a096d986b4c3dbb9388c/baseline/baseline_osl.py) and links to [MatchLive](https://github.com/Becomebright/MatchLive), a streaming video method. These are starting points, not yet frozen 2027 reference runs. The text-only baseline does not inspect video; participants should read the [task rules](../docs/rules.md) before adapting it. Record model/API versions, prompts, permitted inputs, compute, and a reproducible run when final baselines are selected.
