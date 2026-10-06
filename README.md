@@ -15,7 +15,7 @@ Answer multiple-choice questions while a soccer match unfolds. At question time 
 
 ## Data
 
-The [SN-VQA-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) uses OpenSportsLib OSL JSON. This repository includes [public test questions and labels](data/test/test_GT.json) for 4 halves/700 questions, [public challenge questions without labels](data/challenge/challenge_public.json) for 10 halves/1,158 questions, and the baseline predictions for both. The **challenge ground truth is private** and not committed. Train and validation sets have not yet been identified; see the [split inventory](data/README.md).
+The [SN-VQA-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) uses OpenSportsLib OSL JSON. This repository includes [public test questions and labels](data/test_GT.json) for 4 halves/700 questions, [public challenge questions without labels](data/challenge_public.json) for 10 halves/1,158 questions, and the baseline predictions for both. The **challenge ground truth is private** and not committed. Train and validation sets have not yet been identified; see the [split inventory](data/README.md).
 
 ## Baseline
 

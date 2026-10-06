@@ -7,11 +7,10 @@ The local evaluator [eval_predictions.py](eval_predictions.py) is copied from th
 Python 3.9+; no third-party packages. From the repository root:
 
 ```bash
-python3 evaluation/eval_predictions.py data/test/test_submission.json data/test/test_GT.json
-python3 -m unittest discover -s tests -v
+python3 evaluation/eval_predictions.py data/test_submission.json data/test_GT.json
 ```
 
-The public test ground truth and baseline predictions are in [data/test](../data/test). The challenge questions and baseline predictions are in [data/challenge](../data/challenge); **challenge ground truth is not in this repository**. Only organizers can score that split locally.
+The public test ground truth and baseline predictions are in [test files](../data/README.md). The challenge questions and baseline predictions are in [challenge files](../data/README.md); **challenge ground truth is not in this repository**. Only organizers can score that split locally.
 
 ## Contract and metric
 
@@ -19,4 +18,4 @@ Predictions use the OSL `data[].streaming_vqa[]` JSON structure. Match each answ
 
 ## CodaBench package
 
-The scorer reads `/app/input/ref/benchmark.json` from the organizer-only reference package and `/app/input/res/predictions.json` from the submission ZIP, then writes `/app/output/scores.json`. Use `data/test/test_GT.json` for test phase validation. Keep the challenge reference outside Git, in a private organizer package. The task is not live on CodaBench yet. This answer-file scorer cannot enforce visual-only, temporal, or no-web-search rules; those require submission rules and finalist verification.
+The scorer reads `/app/input/ref/benchmark.json` from the organizer-only reference package and `/app/input/res/predictions.json` from the submission ZIP, then writes `/app/output/scores.json`. Use `data/test_GT.json` for test phase validation. Keep the challenge reference outside Git, in a private organizer package. The task is not live on CodaBench yet. This answer-file scorer cannot enforce visual-only, temporal, or no-web-search rules; those require submission rules and finalist verification.
