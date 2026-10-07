@@ -1,13 +1,13 @@
 # Streaming VQA evaluation
 
-[eval_predictions.py](eval_predictions.py) adapts the [task lead's reference evaluator](https://github.com/jyrao/soccernet-streaming-vqa-challenge/tree/94f45fd/codes). [scoring.py](scoring.py) uses the same ID matching, option handling, and aggregation for the scoring-package layout.
+The single [scoring script](scoring.py) evaluates OSL prediction and ground-truth JSON files locally and is also the [CodaBench evaluation program](https://www.codabench.org/competitions/18329/). The server scores the 2027 challenge split; public test files are for local verification.
 
 ## Local scoring
 
 Python 3.9+ is sufficient; no third-party packages are required. From the repository root:
 
 ```bash
-python3 evaluation/eval_predictions.py data/test_submission.json data/test_GT.json
+python3 evaluation/scoring.py data/test_submission.json data/test_GT.json
 ```
 
 The test answers and baseline predictions are in [data](../data/README.md). Challenge questions and baseline predictions are also there, while challenge answers are withheld.
@@ -21,11 +21,11 @@ The ranking score is the unweighted mean of the six subcategory accuracies, repo
 For an analytical view that weights the four D1–D4 categories equally, run:
 
 ```bash
-python3 evaluation/eval_predictions.py data/test_submission.json data/test_GT.json --average-by category
+python3 evaluation/scoring.py data/test_submission.json data/test_GT.json --average-by category
 ```
 
-This gives **41.80%** on the test baseline. It does not set the ranking score. The CodaBench adapter defaults to subcategory mode and accepts the same `--average-by category` option for local evaluation.
+This gives **41.80%** on the test baseline. It does not set the ranking score. The CodaBench scorer uses the same `--average-by category` option; the leaderboard uses the default subcategory average.
 
 ## Scoring-package layout
 
-The adapter reads `/app/input/ref/benchmark.json` and `/app/input/res/predictions.json`, then writes `/app/output/scores.json`. Use `data/test_GT.json` as a local test reference. The answer-file scorer measures prediction accuracy; compliance with the [streaming and input rules](../RULES.md) is established through method documentation and review.
+In CodaBench, the script reads `/app/input/ref/benchmark.json` and `/app/input/res/predictions.json`, then writes `/app/output/scores.json`. Use `data/test_GT.json` as a local test reference. The answer-file scorer measures prediction accuracy; compliance with the [streaming and input rules](../RULES.md) is established through method documentation and review.

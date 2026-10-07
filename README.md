@@ -5,7 +5,7 @@
 📅 **Submission deadline:** April 25, 2027, 23:59 Anywhere on Earth (AoE; UTC−12).\
 👥 **Task leads:** Jiayuan Rao and Ahmad Sait
 
-🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation](evaluation/README.md)
+🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation server](https://www.codabench.org/competitions/18329/) · 🧮 [Evaluation code](evaluation/README.md)
 
 ## Task
 
@@ -17,11 +17,11 @@ The [SN-VQA-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-VQA-2027)
 
 ## Baseline
 
-The [baseline guide](baselines/README.md) links the included prediction files, the task lead's text-only API reference, and MatchLive. It explains how to score the included test predictions and generate submissions in the OSL JSON format.
+The [baseline guide](baselines/README.md) describes the included text-only reference predictions and links a separate streaming-video approach. The predictions and evaluation use the OSL JSON format.
 
 ## Evaluation
 
-The [evaluation guide](evaluation/README.md) contains the task lead's multiple-choice evaluator and a CodaBench scoring adapter. The ranking score is the unweighted mean of the six subcategory accuracies. Four-category averaging is available for analysis with `--average-by category`.
+The [evaluation guide](evaluation/README.md) documents the single script used for local evaluation and CodaBench scoring. The ranking score is the unweighted mean of the six subcategory accuracies. Four-category averaging is available for analysis with `--average-by category`.
 
 ## Community
 

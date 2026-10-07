@@ -11,4 +11,4 @@ The task provides **test and challenge sets only**; there is no separate trainin
 | [challenge_public.json](challenge_public.json) | Questions without answers from 10 match halves (1,158 questions) |
 | [challenge_submission.json](challenge_submission.json) | Baseline predictions for the challenge questions |
 
-The challenge answers are withheld for evaluation. The test files match the [task lead's reference repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge) at commit `94f45fd`; the challenge files follow the same OSL JSON format.
+The challenge answers are withheld for evaluation. All files use the OpenSportsLib OSL JSON format described in the repository's [evaluation guide](../evaluation/README.md).
