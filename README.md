@@ -21,7 +21,7 @@ The [baseline guide](baselines/README.md) links the included prediction files, t
 
 ## Evaluation
 
-The [evaluation guide](evaluation/README.md) contains the task lead's multiple-choice evaluator and a CodaBench scoring adapter. The ranking score is the unweighted mean of the four dimension accuracies, D1–D4.
+The [evaluation guide](evaluation/README.md) contains the task lead's multiple-choice evaluator and a CodaBench scoring adapter. The ranking score is the unweighted mean of the six subcategory accuracies. Four-category averaging is available for analysis with `--average-by category`.
 
 ## Community
 

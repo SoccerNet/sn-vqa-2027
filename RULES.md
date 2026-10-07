@@ -10,4 +10,4 @@
 - **Technical report:** document models or APIs, data sources, prompts and settings, and how audio, future frames, and web retrieval were excluded.
 - **Submission:** provide one OSL JSON prediction for every question. Missing or extra IDs fail validation. An unanswered or invalid option counts as incorrect.
 
-The [evaluation guide](evaluation/README.md) describes the D1–D4 dimension-average metric. The test set supports development; the withheld challenge answers determine the final ranking.
+The [evaluation guide](evaluation/README.md) describes the six-subcategory average used for ranking. The test set supports development; the withheld challenge answers determine the final ranking.

@@ -6,9 +6,9 @@ The task provides **test and challenge sets only**; there is no separate trainin
 
 | File | Contents |
 | --- | --- |
-| [test_GT.json](test_GT.json) | Questions and answers from 4 match halves (700 questions) |
-| [test_submission.json](test_submission.json) | Baseline predictions for the test set |
+| [test_GT.json](test_GT.json) | Questions and answers from 4 match halves (700 questions; six subcategories) |
+| [test_submission.json](test_submission.json) | Baseline predictions for the same 700 test questions |
 | [challenge_public.json](challenge_public.json) | Questions without answers from 10 match halves (1,158 questions) |
 | [challenge_submission.json](challenge_submission.json) | Baseline predictions for the challenge questions |
 
-The challenge answers are withheld for evaluation. The mirrored files come from the [task lead's reference repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge) at commit `6e71e319e1f0c74bd5d5a096d986b4c3dbb9388c`.
+The challenge answers are withheld for evaluation. The test files match the [task lead's reference repository](https://github.com/jyrao/soccernet-streaming-vqa-challenge) at commit `94f45fd`; the challenge files follow the same OSL JSON format.

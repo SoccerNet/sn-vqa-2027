@@ -921,7 +921,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 12:10",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -1085,7 +1085,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 17:43",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -1503,10 +1503,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 23:41",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o2"
         },
@@ -1817,7 +1817,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 25:53",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -2131,7 +2131,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 28:38",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -2505,10 +2505,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 31:05",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o4"
         },
@@ -2677,10 +2677,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 32:32",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o2"
         },
@@ -2939,10 +2939,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "infraction_actor",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 36:28",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o2"
         },
@@ -3223,10 +3223,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 40:05",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o2"
         },
@@ -3455,10 +3455,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 43:49",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o3"
         },
@@ -3888,7 +3888,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 05:02",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -4314,7 +4314,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 08:30",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -4958,10 +4958,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "substitution_pair",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 13:32",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o4"
         },
@@ -5212,7 +5212,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 15:19",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -5608,7 +5608,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 18:44",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -6296,10 +6296,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 22:53",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o3"
         },
@@ -6894,7 +6894,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 27:14",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -7126,10 +7126,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 28:56",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o2"
         },
@@ -8076,7 +8076,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 38:14",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -9138,10 +9138,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 46:00",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o4"
         },
@@ -10799,7 +10799,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 13:16",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -11165,7 +11165,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 16:29",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -11719,7 +11719,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 22:26",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -11973,7 +11973,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 24:24",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -12197,7 +12197,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 25:52",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -12825,7 +12825,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 30:41",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -13139,7 +13139,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 33:38",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -13311,10 +13311,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 35:51",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o3"
         },
@@ -13759,7 +13759,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 38:42",
             "num_of_options": 4,
             "dimension": "dim4"
@@ -14267,10 +14267,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "1 - 43:27",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o4"
         },
@@ -14888,10 +14888,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 04:37",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o1"
         },
@@ -15000,10 +15000,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 06:56",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o4"
         },
@@ -15172,10 +15172,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "substitution_pair",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 12:07",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o2"
         },
@@ -15576,10 +15576,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 16:06",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o1"
         },
@@ -15838,10 +15838,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 17:39",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o2"
         },
@@ -16070,10 +16070,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 19:48",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o3"
         },
@@ -16466,10 +16466,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 24:12",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o3"
         },
@@ -17124,10 +17124,10 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_outcome",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 33:15",
             "num_of_options": 4,
-            "dimension": "dim3"
+            "dimension": "dim4"
           },
           "prediction": "o1"
         },
@@ -19152,7 +19152,7 @@
             }
           ],
           "metadata": {
-            "subcategory": "event_sequence",
+            "subcategory": "causal reasoning",
             "game_time": "2 - 44:08",
             "num_of_options": 4,
             "dimension": "dim4"

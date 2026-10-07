@@ -1,6 +1,6 @@
 # Streaming VQA evaluation
 
-[eval_predictions.py](eval_predictions.py) comes from the [task lead's reference evaluator](https://github.com/jyrao/soccernet-streaming-vqa-challenge/tree/6e71e319e1f0c74bd5d5a096d986b4c3dbb9388c/codes). [scoring.py](scoring.py) applies the same ID matching, option handling, and dimension aggregation to the scoring-package layout.
+[eval_predictions.py](eval_predictions.py) adapts the [task lead's reference evaluator](https://github.com/jyrao/soccernet-streaming-vqa-challenge/tree/94f45fd/codes). [scoring.py](scoring.py) uses the same ID matching, option handling, and aggregation for the scoring-package layout.
 
 ## Local scoring
 
@@ -16,7 +16,15 @@ The test answers and baseline predictions are in [data](../data/README.md). Chal
 
 Predictions use the OSL `data[].streaming_vqa[]` JSON structure. Each answer is matched by `(sample ID, question ID)` because question IDs can repeat across halves. Put an option ID such as `"o2"` in `prediction`, or JSON `null` if unanswered. A missing, duplicate, or extra question ID fails validation; an invalid or empty option counts as incorrect.
 
-The ranking score is the unweighted mean of the D1–D4 dimension accuracies, reported as a percentage. The evaluator also reports per-dimension scores and unanswered count. Its optional `--average-by subcategory` report does not change the ranking score.
+The ranking score is the unweighted mean of the six subcategory accuracies, reported as a percentage. This is the default in both scripts and is equivalent to `--average-by subcategory`. The six groups are counting, recall event time, recall event player, event team, event player, and causal reasoning. Each unanswered or invalid option counts as incorrect. The test baseline scores **41.76%** with this metric.
+
+For an analytical view that weights the four D1–D4 categories equally, run:
+
+```bash
+python3 evaluation/eval_predictions.py data/test_submission.json data/test_GT.json --average-by category
+```
+
+This gives **41.80%** on the test baseline. It does not set the ranking score. The scorer accepts the same `--average-by category` option for local evaluation; CodaBench invokes its default subcategory mode.
 
 ## Scoring-package layout
 
