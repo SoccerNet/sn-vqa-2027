@@ -24,7 +24,7 @@ For an analytical view that weights the four D1–D4 categories equally, run:
 python3 evaluation/eval_predictions.py data/test_submission.json data/test_GT.json --average-by category
 ```
 
-This gives **41.80%** on the test baseline. It does not set the ranking score. The scorer accepts the same `--average-by category` option for local evaluation; CodaBench invokes its default subcategory mode.
+This gives **41.80%** on the test baseline. It does not set the ranking score. The CodaBench adapter defaults to subcategory mode and accepts the same `--average-by category` option for local evaluation.
 
 ## Scoring-package layout
 
