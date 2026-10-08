@@ -77,19 +77,10 @@ def submitted_answers(payload: dict[str, Any]) -> dict[tuple[str, str], dict[str
     return answers
 
 
-def metadata_value(question: dict[str, Any], prediction: dict[str, Any], field: str) -> Any:
-    """Read taxonomy metadata from the GT question, then the prediction question."""
-    for record in (question, prediction):
-        metadata = record.get("metadata")
-        if isinstance(metadata, dict):
-            value = metadata.get(field)
-            if value is not None:
-                return value
-            if field == "category":
-                value = metadata.get("dimension")
-                if value is not None:
-                    return value
-    return None
+def metadata_value(question: dict[str, Any], field: str) -> Any:
+    """Only the reference determines taxonomy; submission metadata is untrusted."""
+    metadata = question.get("metadata")
+    return metadata.get(field) if isinstance(metadata, dict) else None
 
 
 def calculate_scores(
@@ -116,13 +107,13 @@ def calculate_scores(
     unanswered = 0
     groups = SUBCATEGORIES if average_by == "subcategory" else CATEGORIES
     for key, question in benchmark.items():
-        group = metadata_value(question, predictions[key], average_by)
+        group = metadata_value(question, average_by)
         if group not in groups:
             raise ValueError(f"Invalid {average_by} for {key[0]}/{key[1]}: {group!r}")
 
         answer = predictions[key]["answer"]
         valid_options = {option.get("id") for option in question.get("options", [])}
-        if answer is not None and answer not in valid_options:
+        if answer is not None and (not isinstance(answer, str) or answer not in valid_options):
             answer = None
 
         totals[group] += 1
@@ -132,6 +123,9 @@ def calculate_scores(
             correct[group] += 1
 
     present = [group for group in groups if totals[group]]
+    if average_by == "subcategory" and len(present) != len(SUBCATEGORIES):
+        absent = [group for group in SUBCATEGORIES if not totals[group]]
+        raise ValueError(f"Reference must contain all six subcategories; missing: {absent}")
     if not present:
         raise ValueError("No valid questions")
     return {
